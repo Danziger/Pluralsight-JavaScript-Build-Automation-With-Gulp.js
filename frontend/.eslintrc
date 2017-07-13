@@ -1,0 +1,11 @@
+{
+    "extends": "airbnb/base",
+    "rules": {
+        "indent": [2, "tab", {"SwitchCase": 2}],
+        "strict": 0,
+        "space-before-function-paren": [1, "never"],
+        "func-names": 0,
+        "prefer-template": 0,
+        "max-len": [2, 120, 4]
+    }
+}

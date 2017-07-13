@@ -1,34 +1,34 @@
 /* jshint -W117, -W030 */
 describe('Shell', function() {
-    var controller;
+	var controller;
 
-    beforeEach(function() {
-        bard.appModule('app.layout');
-        bard.inject('$controller', '$rootScope', '$timeout');
-    });
+	beforeEach(function() {
+		bard.appModule('app.layout');
+		bard.inject('$controller', '$rootScope', '$timeout');
+	});
 
-    beforeEach(function() {
-        controller = $controller('Shell');
-        $rootScope.$apply();
-    });
+	beforeEach(function() {
+		controller = $controller('Shell');
+		$rootScope.$apply();
+	});
 
-    bard.verifyNoOutstandingHttpRequests();
+	bard.verifyNoOutstandingHttpRequests();
 
-    describe('Shell controller', function() {
-        it('should be created successfully', function() {
-            expect(controller).to.be.defined;
-        });
+	describe('Shell controller', function() {
+		it('should be created successfully', function() {
+			expect(controller).to.be.defined;
+		});
 
-        it('should show splash screen', function() {
-            expect(controller.showSplash).to.be.true;
-        });
+		it('should show splash screen', function() {
+			expect(controller.showSplash).to.be.true;
+		});
 
-        it('should hide splash screen after timeout', function(done) {
-            $timeout(function() {
-                expect(controller.showSplash).to.be.false;
-                done();
-            }, 1000);
-            $timeout.flush();
-        });
-    });
+		it('should hide splash screen after timeout', function(done) {
+			$timeout(function() {
+				expect(controller.showSplash).to.be.false;
+				done();
+			}, 1000);
+			$timeout.flush();
+		});
+	});
 });

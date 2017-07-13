@@ -1,0 +1,10 @@
+Change eslintrc for tslint
+
+PACKAGE JSON:
+
+https://github.com/AngularClass/angular2-webpack-starter/blob/master/package.json
+
+TODO: Almost everything shoyld be a dependency, not a dev dependency...
+
+Include node version...
+

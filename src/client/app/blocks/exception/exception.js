@@ -1,22 +1,22 @@
 (function() {
-    'use strict';
+	'use strict';
 
-    angular
-        .module('blocks.exception')
-        .factory('exception', exception);
+	angular
+		.module('blocks.exception')
+		.factory('exception', exception);
 
-    exception.$inject = ['logger'];
-    /* @ngInject */
-    function exception(logger) {
-        var service = {
-            catcher: catcher
-        };
-        return service;
+	exception.$inject = ['logger'];
+	/* @ngInject */
+	function exception(logger) {
+		var service = {
+			catcher: catcher
+		};
+		return service;
 
-        function catcher(message) {
-            return function(reason) {
-                logger.error(message, reason);
-            };
-        }
-    }
+		function catcher(message) {
+			return function(reason) {
+				logger.error(message, reason);
+			};
+		}
+	}
 })();
